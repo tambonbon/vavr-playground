@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/tammy/Downloads/vavr-1.0.0-alpha-3.jar",
+        "/Users/tammy/Downloads/junit-platform-console-standalone-1.8.0-M1.jar"
+    ]
+}
