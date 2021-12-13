@@ -22,7 +22,8 @@ public class Currying {
         // The difference became clear when number of params increases
         Function3<Integer, Integer, Integer, Integer> sum3Num = (a, b, c) -> a + b + c;
         Function1<Integer, Function1<Integer, Integer>> addNumber2Curried  = sum3Num.curried().apply(2);
+        assertEquals(addNumber2Curried.apply(2).apply(3), 7);
         Function1<Integer, Integer> addNumber2Partial = sum3Num.apply(2, 3);
-
+        assertEquals(addNumber2Partial.apply(2), 7);
     }
 }

@@ -3,15 +3,38 @@ package Functions;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
 import io.vavr.Function1;
 import io.vavr.Function2;
+import io.vavr.Function5;
 
 public class Composition {
     
     static class FunctionsBasic {
         public static void main(String[] args) {
 
-        // the following lambda creates a funciton to sum 2 integers:
+        //  In java..
+        // .. if you'd like to take the sum of two integers with functional fashion..
+        // .. you could do like this:
+        BiFunction<Integer, Integer, Integer> normalBiFunction = (a, b) -> a + b;
+
+        // However, what if I'd like to take the sum of 5 integers? That's hard!
+
+        // With Vavr, you can declare a function taking at most 22 parameters
+        Function2<Integer, Integer, Integer> vavFunction2 = (a, b) -> a + b;
+        Function5<Integer, Integer, Integer, Integer, Integer, Integer> vavrFunction5 = (a, b, c, d, e) -> a + b + c + d + e;
+        
+
+
+
+
+
+
+
+
+        
         Function2<Integer, Integer, Integer> sumLambda = (a, b) -> a + b;
 
         // the following is a long-hand anonymous class def of the above:
